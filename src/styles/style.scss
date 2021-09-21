@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url('../assets/images/space.png') no-repeat center fixed;
+  background-size: cover;
+}
+
+.moon {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px rgba(17, 16, 22, 0.76) inset, 0 0 20px 2px;
+}
+
+.moon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-color: #000;
+  border-radius: 50%;
+  box-shadow: -40px -40px 50px 2px #000 inset;
+}
+
+.moon > div {
+  width: 200%;
+  height: 100%;
+  animation: spin 40s linear alternate infinite;
+  background: url('../assets/images/lunar-surface.jpeg')
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%);
+  }
+}
